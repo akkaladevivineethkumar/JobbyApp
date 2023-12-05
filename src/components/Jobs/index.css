@@ -29,7 +29,7 @@
   margin-right: 16px;
 }
 .profile-filter-container {
-  width: 25%;
+  width: 30%;
   margin: 16px;
 }
 .filter-heading1 {
@@ -38,6 +38,8 @@
   font-size: 18px;
 }
 .filter-list-item {
+  display: flex;
+  padding-left: 0px;
   margin-bottom: 12px;
 }
 .filter-input-label {
@@ -95,3 +97,11 @@
   background-color: transparent;
   border-width: 0px;
 }
+
+.salary-container {
+  padding-top: 0%;
+}
+
+/* .ul {
+  width: 35%;
+} */

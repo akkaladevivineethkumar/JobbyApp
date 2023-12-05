@@ -2,7 +2,6 @@ import './index.css'
 
 import {Component} from 'react'
 import Cookies from 'js-cookie'
-import {Redirect} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
 
 import {AiFillStar} from 'react-icons/ai'
@@ -10,9 +9,8 @@ import {MdLocationOn} from 'react-icons/md'
 import {BsBriefcaseFill} from 'react-icons/bs'
 import {BiLinkExternal} from 'react-icons/bi'
 
-import SimilarJobItems from '../SimilarJobItems'
-
 import Header from '../Header'
+import SimilarJobItem from '../SimilarJobItem'
 
 const apiStatusConstants = {
   initial: 'INITIAL',
@@ -212,7 +210,7 @@ class JobItemDetails extends Component {
         <h1 className="similar-jobs-heading">Similar Jobs</h1>
         <ul className="similar-jobs-list">
           {similarJobsData.map(eachSimilarJob => (
-            <SimilarJobItems
+            <SimilarJobItem
               key={eachSimilarJob.id}
               jobDetails={eachSimilarJob}
             />
@@ -239,10 +237,6 @@ class JobItemDetails extends Component {
   }
 
   render() {
-    const jwtToken = Cookies.get('jwt_token')
-    if (jwtToken === undefined) {
-      return <Redirect to="/login" />
-    }
     return (
       <>
         <Header />
@@ -253,5 +247,4 @@ class JobItemDetails extends Component {
     )
   }
 }
-
 export default JobItemDetails
