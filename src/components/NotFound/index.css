@@ -1,0 +1,14 @@
+.bg-color {
+  background-color: black;
+  height: 100vh;
+}
+.notFound-heading {
+  color: white;
+  font-family: 'Roboto';
+  font-size: 28px;
+}
+.notFound-para {
+  color: white;
+  font-family: 'Roboto';
+  font-size: 16px;
+}
